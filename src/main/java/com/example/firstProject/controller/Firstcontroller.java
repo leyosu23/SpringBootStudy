@@ -12,4 +12,9 @@ public class Firstcontroller {
         model.addAttribute("username","YS");
         return "greetings"; // templates/greetings.mustache -> send to browser!
     }
+    @GetMapping("/bye")
+    public String terminate(Model model){
+        model.addAttribute("nickname","KiwiLover");
+        return "terminate";
+    }
 }
