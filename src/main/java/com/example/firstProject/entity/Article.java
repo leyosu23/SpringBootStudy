@@ -1,10 +1,15 @@
 package com.example.firstProject.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.Column;
 import javax.persistence.Entity; //enables DB understands objects
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@AllArgsConstructor
+@ToString
 @Entity
 public class Article {
 
@@ -16,18 +21,6 @@ public class Article {
     @Column
     private String content;
 
-    public Article(Long id, String title, String content) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-    }
 
-    @Override
-    public String toString() {
-        return "Article{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
+
 }
